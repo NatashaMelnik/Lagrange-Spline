@@ -19,7 +19,7 @@ namespace lr4_Lagrange_Spline
         static void SplineCalc(double[] xValues, double[] yValues)
         {
             const int size = 5;
-            double[] mValues = new double[size] { 3.56606, -1.43213, -0.27028, 0.64508, -0.81004 };        // chto eto????
+            double[] mValues = new double[size] { 3.56606, -1.43213, -0.27028, 0.64508, -0.81004 };     
             double h = (xValues[size - 1] - xValues[0]) / 99;
             int step = 0;
             for (double i = xValues[0]; i <= xValues[size - 1] + h; i += h)
@@ -68,8 +68,8 @@ namespace lr4_Lagrange_Spline
             double[] s1 = new double[4] { 0.0, 0.0, 0.0, 0.0 };
             double[] s2 = new double[4] { 0.0, 0.0, 0.0, 0.0 };
             double[] s3 = new double[4] { 0.0, 0.0, 0.0, 0.0 };
-            double[] h = new double[4] { 2.0, 3.0, 4.0, 4.0 };
-            double[] d = new double[4] { 2.00000, 0.66667, -0.25000, 0.75000 };
+            double[] h = new double[4] { 3, 3, 2, 2 };
+            double[] d = new double[4] { 0, -9.21, 49.07, -26.57 };
             double[] S = new double[4] { 0.0, 0.0, 0.0, 0.0 };
             int i = 3;
             double currentSpline = 0.0;
